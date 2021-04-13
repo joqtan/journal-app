@@ -6,4 +6,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [react-router](https://reactrouter.com/web/guides/quick-start)
 
-[node-sass](https://www.npmjs.com/package/node-sass)
+[dart-sass](https://github.com/sass/dart-sass)
