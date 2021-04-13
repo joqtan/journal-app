@@ -1,7 +1,8 @@
 import React from 'react'
+import AppRouter from './routers/AppRouter'
 
 const JournalApp = () => {
-    return <h1>JournalApp</h1>
+    return <AppRouter />
 }
 
 export default JournalApp
