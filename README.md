@@ -7,3 +7,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 [react-router](https://reactrouter.com/web/guides/quick-start)
 
 [dart-sass](https://github.com/sass/dart-sass)
+
+[font-awesome](https://cdnjs.com/libraries/font-awesome)
