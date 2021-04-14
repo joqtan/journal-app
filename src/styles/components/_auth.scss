@@ -40,6 +40,10 @@
         border-bottom: 1px solid $primary;
         outline: none;
     }
+    &::placeholder {
+        color: lighten($color: $dark-grey, $amount: 25);
+        font-size: 0.8em;
+    }
 }
 
 .auth__social-networks {
