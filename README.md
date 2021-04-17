@@ -11,3 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 [font-awesome](https://cdnjs.com/libraries/font-awesome)
 
 [react-redux](https://react-redux.js.org/introduction/getting-started)
+
+[firebase](https://firebase.google.com/)
+
+[redux-thunk](https://github.com/reduxjs/redux-thunk)
