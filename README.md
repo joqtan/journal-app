@@ -15,3 +15,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 [firebase](https://firebase.google.com/)
 
 [redux-thunk](https://github.com/reduxjs/redux-thunk)
+
+[validator.js](https://github.com/validatorjs/validator.js)
