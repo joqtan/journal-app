@@ -20,13 +20,6 @@ const RegisterScreen = () => {
 
     const { name, email, password, passwordConfirm } = formValues
 
-    const handleRegister = (e) => {
-        e.preventDefault()
-        if (isFormValid()) {
-            dispatch(startRegisterWithEmailPasswordName(email, password, name))
-        }
-    }
-
     const isFormValid = () => {
         if (validator.isEmpty(name, { ignore_whitespace: true })) {
             dispatch(setError('name is required'))
@@ -43,6 +36,13 @@ const RegisterScreen = () => {
         }
         dispatch(unsetError())
         return true
+    }
+
+    const handleRegister = (e) => {
+        e.preventDefault()
+        if (isFormValid()) {
+            dispatch(startRegisterWithEmailPasswordName(email, password, name))
+        }
     }
 
     return (
