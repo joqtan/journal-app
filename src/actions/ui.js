@@ -7,3 +7,11 @@ export const setError = (err) => ({
 export const unsetError = () => ({
     type: types.uiUnsetError,
 })
+
+export const startLoading = () => ({
+    type: types.uiStartLoading,
+})
+
+export const stopLoading = () => ({
+    type: types.uiStopLoading,
+})

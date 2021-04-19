@@ -12,7 +12,7 @@ const LoginScreen = () => {
         email: 'joqtan@mail.com',
         password: 'Password12.',
     })
-    const { msgError } = useSelector((state) => state.ui)
+    const { loading, msgError } = useSelector((state) => state.ui)
     const { email, password } = formValues
 
     const isValid = () => {
@@ -61,7 +61,11 @@ const LoginScreen = () => {
                     value={password}
                     onChange={handleInputChange}
                 />
-                <button className='btn btn-primary btn-block' type='submit'>
+                <button
+                    className='btn btn-primary btn-block'
+                    type='submit'
+                    disabled={loading}
+                >
                     Login
                 </button>
                 <div className='auth__social-networks'>
