@@ -94,7 +94,7 @@ const RegisterScreen = () => {
                     className='btn btn-primary btn-block mb-5'
                     type='submit'
                 >
-                    Login
+                    Register
                 </button>
                 <Link to='/auth/login' className='link'>
                     Sing in instead

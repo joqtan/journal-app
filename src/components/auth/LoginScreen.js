@@ -55,7 +55,7 @@ const LoginScreen = () => {
                 />
                 <label className='auth__label'>Password</label>
                 <input
-                    type='text'
+                    type='password'
                     name='password'
                     className='auth__input'
                     value={password}
