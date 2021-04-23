@@ -7,6 +7,7 @@ import AuthRouter from './AuthRouter'
 import { login } from '../actions/auth'
 import PublicRoute from './PublicRoute'
 import PrivateRoute from './PrivateRoute'
+import { startLoadingNotes } from '../actions/notes'
 
 const AppRouter = () => {
     const dispatch = useDispatch()
@@ -20,6 +21,7 @@ const AppRouter = () => {
             if (user?.uid) {
                 dispatch(login(user.uid, user.displayName))
                 setIsLoggedIn(true)
+                dispatch(startLoadingNotes(user.uid))
             } else {
                 setIsLoggedIn(false)
             }

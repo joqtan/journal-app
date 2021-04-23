@@ -17,3 +17,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 [redux-thunk](https://github.com/reduxjs/redux-thunk)
 
 [validator.js](https://github.com/validatorjs/validator.js)
+
+[sweet-alert](https://github.com/sweetalert2/sweetalert2)
+
+[Moment.js](https://momentjs.com/)
