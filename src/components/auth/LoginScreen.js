@@ -40,7 +40,10 @@ const LoginScreen = () => {
     return (
         <>
             <h3 className='auth__title mb-5'>Login</h3>
-            <form onSubmit={handleLogin}>
+            <form
+                onSubmit={handleLogin}
+                className='animate__animated animate__fadeIn animate__fast'
+            >
                 {msgError && (
                     <div className='auth__alert-error'>{msgError}</div>
                 )}

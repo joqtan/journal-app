@@ -20,4 +20,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [sweet-alert](https://github.com/sweetalert2/sweetalert2)
 
-[Moment.js](https://momentjs.com/)
+[moment.js](https://momentjs.com/)
+
+[cloudinary](https://cloudinary.com/)
