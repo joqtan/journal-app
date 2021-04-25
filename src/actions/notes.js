@@ -2,6 +2,7 @@ import { types } from '../types/types'
 import { db } from '../firebase/firebaseConfig'
 import { loadNotes } from '../helpers/loadNotes'
 import Swal from 'sweetalert2'
+import { fileUpload } from '../helpers/fileUpload'
 
 export const startNewNote = () => {
     return async (dispatch, getState) => {
@@ -50,4 +51,38 @@ export const startSaveNote = (note) => {
 export const refreshNote = (id, note) => ({
     type: types.notesUpdated,
     payload: { id, note: { id, ...note } },
+})
+
+export const startUpload = (file) => {
+    return async (dispatch, getState) => {
+        const { active: activeNote } = getState().notes
+        Swal.fire({
+            title: 'Uploading',
+            text: 'Please wait a moment',
+            allowOutsideClick: false,
+            showConfirmButton: false,
+            willOpen: () => {
+                Swal.showLoading()
+            },
+        })
+        const fileUrl = await fileUpload(file)
+        activeNote.url = fileUrl
+        dispatch(startSaveNote(activeNote))
+        Swal.close()
+    }
+}
+
+export const startDelete = (id) => {
+    return async (dispatch, getState) => {
+        const uid = getState().auth.uid
+
+        await db.doc(`${uid}/journal/notes/${id}`).delete()
+
+        dispatch(deleteNote(id))
+    }
+}
+
+export const deleteNote = (id) => ({
+    type: types.notesDelete,
+    payload: id,
 })

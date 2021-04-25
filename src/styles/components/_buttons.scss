@@ -6,7 +6,7 @@
     font-size: 12px;
     padding: 7px 10px 7px 10px;
 
-    transition: color 0.3 ease;
+    transition: color 0.3s ease;
 
     &:focus {
         outline: none;
@@ -29,7 +29,13 @@
         background-color: darken($color: $primary, $amount: 15);
     }
 }
-
+.btn-danger {
+    background-color: #df4759;
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color: darken($color: #df4759, $amount: 10);
+    }
+}
 .btn-block {
     width: 100%;
 }
